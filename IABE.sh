@@ -73,14 +73,14 @@ sudo chmod 644 /etc/udev/rules.d/51-android.rules
 
 echo
 echo "正在下载 Linux 64位 系统的Android SDK"
-        wget http://dl.google.com/android/adt/adt-bundle-linux-x86_64-20131030.zip
+        wget http://dl.google.com/android/adt/adt-bundle-linux-x86_64-20140702.zip
 echo "下载完成!!"
 echo "展开文件"
 	mkdir ~/adt-bundle
-        mv adt-bundle-linux-x86_64-20131030.zip ~/adt-bundle/adt_x64.zip
+        mv adt-bundle-linux-x86_64-20140702.zip ~/adt-bundle/adt_x64.zip
         cd ~/adt-bundle
         unzip adt_x64.zip
-        mv -f adt-bundle-linux-x86_64-20131030/* .
+        mv -f adt-bundle-linux-x86_64-20140702/* .
 echo "正在配置"
         echo -e '\n# Android tools\nexport PATH=${PATH}:~/adt-bundle/sdk/tools\nexport PATH=${PATH}:~/adt-bundle/sdk/platform-tools\nexport PATH=${PATH}:~/bin' >> ~/.bashrc
         echo -e '\nPATH="$HOME/adt-bundle/sdk/tools:$HOME/adt-bundle/sdk/platform-tools:$PATH"' >> ~/.profile
@@ -91,7 +91,7 @@ clear
 echo
 echo "清除临时文件..."
 echo
-rm -Rf ~/adt-bundle/adt-bundle-linux-x86_64-20131030
+rm -Rf ~/adt-bundle/adt-bundle-linux-x86_64-20140702
 rm -f ~/adt-bundle/adt_x64.zip
 
 echo
@@ -101,5 +101,3 @@ echo "感谢使用本脚本!"
 echo
 read -p "按回车键退出..."
 exit
-
-
